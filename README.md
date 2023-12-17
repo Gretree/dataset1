@@ -49,3 +49,27 @@ Result: Correlation between Human Mobility and CO<sub>2</sub> Emissions - Code E
 * **`correlations between network features and CO2 emissions.ipynb`** - Code for Fig. 1e: calculate the correlation coefficient.
 * **global** - Results of `calculatie global features.ipynb`, with the summary available in `global_features.csv`.
 * **node** - Results of `calculatie node features.ipynb`, with the summary available in `node features.csv`.
+## 4. Prediction
+Utilizing different strategies to predict carbon emissions with network features, population data and latitude-longitude features.[这里的特征名称需要确认一下]
+* **`LGBM-strategy1.ipynb`** and **`LGBM-strategy2.ipynb`** - The respective code for Strategy 1 and Strategy 2.
+* **`res_lgbm_s1.csv`** and **`res_lgbm_s2.csv`** - The respective prediction result of `LGBM-strategy1.ipynb` and `LGBM-strategy2.ipynb`.
+* **`plot the predicted result.ipynb`** - Code for Fig. 2: analyze the relations between the predicted CO2 emissions and observed CO<sub>2</sub> emissions for each strategy.
+
+## 5. Evaluation
+Evaluate the importance of features and perform robustness analysis.
+* **`LGBM-strategy1-null model.ipynb`** and **`LGBM-strategy2-null model.ipynb`** - The different strategies for predicting CO<sub>2</sub> emissions with population and latitude-longitude features.
+* **`res_lgbm_s1_null.csv`** and **`res_lgbm_s2_null.csv`** - The respective prediction result of `LGBM-strategy1-null.ipynb` and `LGBM-strategy2-null.ipynb`.
+* **`ablation experiment.ipynb`** - Code for Fig. 3c: conduct ablation experiments.
+* **`prediction with all historial data.ipynb`** - Code for Fig. 3d: predict CO<sub>2</sub> emissions with all history data.
+
+
+## 6.extrapolation
+In a consistent approach, we computed input data for predictive models for various countries by incorporating network features from their respective `mobility data`. The outcomes were then stored in the specified files. Subsequently, the data and predictive model were employed to generate the results in Fig. 4.
+* **`input_Italy.csv`**
+* **`input_Mexico.csv`**
+* **`input_USA_county.csv`**
+* **`input_USA_state.csv`**
+
+## 7.city clusters
+* **`city cluster- normal times.csv`** - The input data for `city cluster.ipynb`, includes total CO<sub>2</sub> emission data for cities, along with information about their respective urban clusters.
+* **`city cluster.ipynb`** - Code for Fig. 5: analyze the characteristics of human mobility and CO<sub>2</sub> emissions in urban clusters.
